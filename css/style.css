@@ -1,0 +1,321 @@
+/* Reset for padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Container for all content */
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #ffffff; /* Changed to white for consistency */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top = 0;
+    z-index: 1000;
+    width = 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+header:hover {
+    background: linear-gradient(135deg, #ff6a88, #ffcc70); /* Bright and cheerful mix */
+
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333; /* Dark text color for contrast */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+header h1:hover {
+    color: purple; /* Change color on hover for emphasis */
+}
+
+header .button {
+    display: flex;
+    gap: 10px;
+}
+
+.header .button button {
+    background-color: #007BFF; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Button hover effect */
+header .button button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+
+/* Name section styles */
+.name h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.name {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Button styles */
+.button {
+    display: flex;
+    gap: 10px;
+}
+
+.button button {
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.button button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Flexbox layout for about_me container */
+.about_me {
+    display: flex;
+    margin: 10px 0; /* Space between blocks */
+    background: linear-gradient(135deg, #FFB6B6, #F5E1DA);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Me Section: 30% width */
+.about_me .heading {
+    text-align: center;
+    flex: 0 0 30%; /* Fixed 30% width */
+    padding: 16px;
+}
+
+/* Timeline Section: 70% width */
+.about_me .timeline {
+    flex: 0 0 70%; /* Fixed 70% width */
+  text-align: center;
+}
+
+.timeline img {
+    width: 100%; /* Full width for images */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Education Section */
+.education {
+    display: flex;
+    margin: 10px 0; /* Space between blocks */
+    background: linear-gradient(135deg, #FFB6B6, #F5E1DA);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education .heading {
+    flex: 0 0 30%; /* Fixed 30% width */
+    font-weight: bold;
+    padding-right: 10px; /* Space between heading and content */
+    color: #333; /* Darker color for better readability */
+}
+
+.education .content {
+    flex: 1; /* Takes remaining space */
+}
+
+/* Projects Section */
+.projects {
+    text-align: center;
+    margin: 10px 0; /* Space between blocks */
+    background: linear-gradient(135deg, #FFB6B6, #F5E1DA);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-heading {
+    font-size: 2rem; /* Adjust the size of the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.project-container {
+    display: flex;
+    justify-content: center; /* Center the project boxes */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 20px; /* Space between project boxes */
+}
+
+.project-box {
+    background-color: #ffffff; /* Consistent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    width: 32%; /* Adjust width to fit three boxes in one row */
+    padding: 16px; /* Inner padding */
+    transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+.project-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+
+.project-image {
+    width: 100%; /* Full width for the image */
+    border-radius: 8px; /* Consistent rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.project-description {
+    font-size: 1rem; /* Font size for the description */
+    text-align: center; /* Center the text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about_me, .education {
+        flex-direction: column; /* Stack elements on smaller screens */
+    }
+
+    .about_me .heading,
+    .about_me .timeline,
+    .education .heading,
+    .education .content {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+
+    .timeline img {
+        width: 100%;
+    }
+
+    .project-box {
+        width: 90%; /* Adjust width on smaller screens */
+    }
+}
+
+/* Publications Section */
+.publications {
+    text-align: left;
+    display: flex;
+    margin: 10px 0; /* Space between blocks */
+    background: linear-gradient(135deg, #FFB6B6, #F5E1DA); /* Gradient background */
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.publications .heading {
+    flex: 0 0 30%; /* Fixed 30% width for heading */
+    font-weight: bold;
+    padding-right: 10px; /* Space between heading and content */
+    color: #333; /* Darker color for better readability */
+    text-align: left; /* Center the heading */
+}
+
+.publications .content {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column; /* Stack publication titles vertically */
+    gap: 10px; /* Space between publication boxes */
+}
+
+.publication-box {
+    display: flex; /* Flex display for alignment */
+    background-color: #ffffff; /* White background for publication boxes */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    padding: 16px; /* Inner padding */
+    transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+.publication-box:hover {
+    transform: scale(1.02); /* Slightly enlarge the box on hover */
+}
+
+.publication_title {
+    font-size: 0.9rem; /* Font size for the publication title */
+    line-height: 1.4; /* Line height for better readability */
+}
+.contact {
+    display: flex; /* Flex display for layout */
+    margin: 20px 0; /* Space above and below the contact section */
+    background: linear-gradient(135deg, #FFB6B6, #F5E1DA); /* Gradient background */
+    padding: 16px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.contact .heading {
+    flex: 0 0 30%; /* Fixed 30% width for the heading */
+    font-weight: bold;
+    color: #333; /* Dark color for readability */
+    padding-right: 10px; /* Space between heading and content */
+}
+
+.contact .content {
+    flex: 1; /* Take remaining space for icons */
+}
+
+.contact h1 {
+    font-size: 2rem; /* Size of the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-icons {
+    display: flex; /* Flex display for icons */
+    justify-content: flex-start; /* Align icons to the left */
+    gap: 20px; /* Space between icons */
+}
+
+.contact-icon {
+    display: inline-block; /* Keep icons inline */
+    transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+.contact-icon img {
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+}
+
+.contact-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+
