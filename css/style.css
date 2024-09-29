@@ -1,9 +1,19 @@
+:root {
+    --gradient: linear-gradient(180deg, #ffffff, #f5f5f5, #e0e0e0, #bdbdbd);
+}
+
+
 /* Reset for padding and margin */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+ /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
 
 /* General styles */
 body {
@@ -30,7 +40,7 @@ header {
     width = 100%;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: var(--gradient);
     padding: 20px;
     border-bottom: 2px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -38,7 +48,7 @@ header {
 }
 
 header:hover {
-    background: linear-gradient(135deg, #ff6a88, #ffcc70); /* Bright and cheerful mix */
+    background: var(--gradient); /* Bright and cheerful mix */
 
 }
 
@@ -112,7 +122,7 @@ header .button button:hover {
 .about_me {
     display: flex;
     margin: 10px 0; /* Space between blocks */
-    background: linear-gradient(135deg, #FFB6B6, #F5E1DA);
+    background: var(--gradient);
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -141,7 +151,7 @@ header .button button:hover {
 .education {
     display: flex;
     margin: 10px 0; /* Space between blocks */
-    background: linear-gradient(135deg, #FFB6B6, #F5E1DA);
+    background: var(--gradient);
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -162,7 +172,7 @@ header .button button:hover {
 .projects {
     text-align: center;
     margin: 10px 0; /* Space between blocks */
-    background: linear-gradient(135deg, #FFB6B6, #F5E1DA);
+    background: var(--gradient);
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -233,7 +243,7 @@ header .button button:hover {
     text-align: left;
     display: flex;
     margin: 10px 0; /* Space between blocks */
-    background: linear-gradient(135deg, #FFB6B6, #F5E1DA); /* Gradient background */
+    background: var(--gradient); /* Gradient background */
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
@@ -276,7 +286,7 @@ header .button button:hover {
 .contact {
     display: flex; /* Flex display for layout */
     margin: 20px 0; /* Space above and below the contact section */
-    background: linear-gradient(135deg, #FFB6B6, #F5E1DA); /* Gradient background */
+    background: var(--gradient); /* Gradient background */
     padding: 16px; /* Inner padding */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
@@ -292,6 +302,7 @@ header .button button:hover {
 .contact .content {
     flex: 1; /* Take remaining space for icons */
 }
+
 
 .contact h1 {
     font-size: 2rem; /* Size of the heading */
@@ -318,4 +329,12 @@ header .button button:hover {
     transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
-
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    margin: 10px 0; /* Space between blocks */
+    background: var(--gradient); /* Gradient background */
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}

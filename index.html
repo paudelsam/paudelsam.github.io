@@ -13,6 +13,7 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
 
     <!-- Font and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -28,10 +29,11 @@
   </div>
 
   <div class="button">
-    <button>Timeline</button>
-    <button>Projects</button>
-    <button>Publications</button>
-    <button>Contacts</button>
+    <!-- Buttons with href linked to specific sections by id -->
+    <!-- <button onclick="scrollToSection('timeline')">Timeline</button> -->
+    <button onclick="scrollToSection('projects')">Projects</button>
+    <button onclick="scrollToSection('publications')">Publications</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
   </div>
 </header>
 
@@ -45,7 +47,7 @@
   </div>
   <div class = "timeline">
     <h1>Timeline of my Life</h1>
-    <img src="/img/timeline.jpeg" alt="Timeline of my life", height="500", width = 100%>
+    <img src="/img/timeline.png" alt="Timeline of my life", height="500", width = 100%>
   </div>
 </div>
 
@@ -61,7 +63,7 @@
   </div>
 </div>
 
-<div class="projects">
+<div id="projects" class="projects">
   <h2 class="projects-heading">Projects</h2>
   <div class="project-container">
     <a href="project-url-1" class="project-box">
@@ -69,7 +71,7 @@
       <p class="project-description">This RNA-seq project focuses on identifying differentially expressed mRNAs in diffuse
         large B-cell lymphoma (DLBCL) using sequencing data from healthy and diseased dog models. The analysis aims to
         correlate miRNA expression with mRNA levels, validating findings through RT-qPCR, with the goal of advancing
-        diagnostics and personalized treatments for DLBCL</p>
+        diagnostics and personalized treatments for DLBCL.</p>
     </a>
     <a href="https://doi.org/10.3390/covid1020036" class="project-box">
       <img src="img/covid.png" alt="covid-nepal" class="project-image">
@@ -88,7 +90,7 @@
   </div>
 </div>
 
-<div class="publications">
+<div id="publications" class="publications">
     <div class="heading">
         <h1>Publications</h1>
         <a href="https://scholar.google.com/citations?user=O36WstsAAAAJ&hl=en" class="complete-link">Complete Publication</a>
@@ -104,12 +106,17 @@
                 Mandal, A. K., <b>Paudel, S.</b>, Pandey, A., et al. (2022). Guava leaf essential oil as a potent antioxidant and anticancer agent: validated through experimental and computational study. Antioxidant, 11(11), doi: 10.3390/antiox11112204
             </div>
         </a>
+        <a href="https://doi.org/10.55878/SES2022-2-1-1" class="publication-box">
+            <div class="publication_title">
+              <b>Paudel, S.</b>, Shrestha, R., Poudel, P., Adhikari, R. (2022).The Influence of Soap and Alcohol-based Cleanser on Human Skin. Spectrum of Emerging Sciences, 2(1), pp. 1-10.
+                 </div>
+        </a>
         <!-- Add more publication boxes as needed -->
     </div>
 </div>
 
 
-<div class="contact">
+<div id="contact" class="contact">
     <div class="heading">
         <h1>Contact Me</h1>
     </div>
@@ -134,6 +141,11 @@
     </div>
 </div>
 
+<div class="copyright">
+  Copyright: Samrat Paudel
+  <br>
+  Website Last Updated: September 29, 2024
+</div>
 
 
 
