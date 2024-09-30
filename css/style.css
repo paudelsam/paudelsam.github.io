@@ -2,7 +2,6 @@
     --gradient: linear-gradient(180deg, #ffffff, #f5f5f5, #e0e0e0, #bdbdbd);
 }
 
-
 /* Reset for padding and margin */
 * {
     margin: 0;
@@ -10,16 +9,34 @@
     box-sizing: border-box;
 }
 
- /* Smooth scroll */
-      html {
-        scroll-behavior: smooth;
-      }
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about_me, .education {
+    flex-direction: column;
+  }
+
+  .about_me .heading,
+  .about_me .timeline,
+  .education .heading,
+  .education .content {
+    flex: 1 1 100%;
+  }
+
+  .project-box {
+    width: 90%;
+  }
+}
 
 /* General styles */
 body {
     font-family: 'Helvetica', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Light background for contrast */
+  background-color: #f9f9f9;
 }
 
 /* Container for all content */
@@ -27,7 +44,7 @@ body {
     max-width: 90%;
     margin: 0 auto;
     padding: 16px;
-    background-color: #ffffff; /* Changed to white for consistency */
+  background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -35,55 +52,52 @@ body {
 header {
     display: flex;
     position: sticky;
-    top = 0;
+  top: 0;
     z-index: 1000;
-    width = 100%;
+  width: 100%;
     justify-content: space-between;
     align-items: center;
     background: var(--gradient);
     padding: 20px;
     border-bottom: 2px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
 }
 
 header:hover {
-    background: var(--gradient); /* Bright and cheerful mix */
-
+  background: var(--gradient);
 }
 
 header h1 {
     font-size: 2rem;
-    color: #333; /* Dark text color for contrast */
-    transition: color 0.3s; /* Smooth transition for color change */
+  color: #333;
+  transition: color 0.3s;
 }
 
 header h1:hover {
-    color: purple; /* Change color on hover for emphasis */
+  color: purple;
 }
 
-header .button {
+header .button, .button {
     display: flex;
     gap: 10px;
 }
 
-.header .button button {
-    background-color: #007BFF; /* Button color */
+header .button button, .button button {
+  background-color: #007BFF;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Button hover effect */
-header .button button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight enlargement on hover */
+header .button button:hover, .button button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
-
 
 /* Name section styles */
 .name h1 {
@@ -96,82 +110,39 @@ header .button button:hover {
     color: #555;
 }
 
-/* Button styles */
-.button {
+/* Flexbox layout for about_me and education containers */
+.about_me, .education {
     display: flex;
-    gap: 10px;
-}
-
-.button button {
-    background-color: #007BFF; /* Bootstrap primary color */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-/* Button hover effect */
-.button button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Flexbox layout for about_me container */
-.about_me {
-    display: flex;
-    margin: 10px 0; /* Space between blocks */
+  margin: 10px 0;
     background: var(--gradient);
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* About Me Section: 30% width */
-.about_me .heading {
-    text-align: center;
-    flex: 0 0 30%; /* Fixed 30% width */
+.about_me .heading, .education .heading {
+  flex: 0 0 30%;
     padding: 16px;
-}
-
-/* Timeline Section: 70% width */
-.about_me .timeline {
-    flex: 0 0 70%; /* Fixed 70% width */
+  font-weight: bold;
+  color: #333;
   text-align: center;
 }
 
-.timeline img {
-    width: 100%; /* Full width for images */
-    border-radius: 8px; /* Consistent rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.about_me .timeline, .education .content {
+  flex: 0 0 70%;
+  text-align: center;
 }
 
-/* Education Section */
-.education {
-    display: flex;
-    margin: 10px 0; /* Space between blocks */
-    background: var(--gradient);
-    padding: 16px;
+.timeline img, .project-image {
+  width: 100%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.education .heading {
-    flex: 0 0 30%; /* Fixed 30% width */
-    font-weight: bold;
-    padding-right: 10px; /* Space between heading and content */
-    color: #333; /* Darker color for better readability */
-}
-
-.education .content {
-    flex: 1; /* Takes remaining space */
 }
 
 /* Projects Section */
 .projects {
     text-align: center;
-    margin: 10px 0; /* Space between blocks */
+  margin: 10px 0;
     background: var(--gradient);
     padding: 16px;
     border-radius: 8px;
@@ -179,162 +150,150 @@ header .button button:hover {
 }
 
 .projects-heading {
-    font-size: 2rem; /* Adjust the size of the heading */
-    margin-bottom: 20px; /* Space below the heading */
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .project-container {
-    display: flex;
-    justify-content: center; /* Center the project boxes */
-    flex-wrap: wrap; /* Allow wrapping to the next line */
-    gap: 20px; /* Space between project boxes */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .project-box {
-    background-color: #ffffff; /* Consistent white background */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-decoration: none; /* Remove underline from links */
-    color: #333; /* Text color */
-    width: 32%; /* Adjust width to fit three boxes in one row */
-    padding: 16px; /* Inner padding */
-    transition: transform 0.3s; /* Smooth scale effect on hover */
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .project-box:hover {
-    transform: scale(1.05); /* Slightly enlarge the box on hover */
-}
-
-.project-image {
-    width: 100%; /* Full width for the image */
-    border-radius: 8px; /* Consistent rounded corners */
-    margin-bottom: 10px; /* Space below the image */
+  transform: translateY(-5px);
 }
 
 .project-description {
-    font-size: 1rem; /* Font size for the description */
-    text-align: center; /* Center the text */
+  margin-top: 10px;
+  font-size: 1em;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about_me, .education {
-        flex-direction: column; /* Stack elements on smaller screens */
-    }
-
-    .about_me .heading,
-    .about_me .timeline,
-    .education .heading,
-    .education .content {
-        flex: 1 1 100%; /* Full width on smaller screens */
-    }
-
-    .timeline img {
-        width: 100%;
-    }
-
-    .project-box {
-        width: 90%; /* Adjust width on smaller screens */
-    }
+.project-buttons, .publication-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
+
+.btn {
+  text-decoration: none;
+  font-size: small;
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
 
 /* Publications Section */
 .publications {
     text-align: left;
     display: flex;
-    margin: 10px 0; /* Space between blocks */
-    background: var(--gradient); /* Gradient background */
+  margin: 10px 0;
+  background: var(--gradient);
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .publications .heading {
-    flex: 0 0 30%; /* Fixed 30% width for heading */
+  flex: 0 0 30%;
+  padding-right: 10px;
     font-weight: bold;
-    padding-right: 10px; /* Space between heading and content */
-    color: #333; /* Darker color for better readability */
-    text-align: left; /* Center the heading */
+  color: #333;
+  text-align: left;
 }
 
 .publications .content {
-    flex: 1; /* Takes remaining space */
+  flex: 1;
     display: flex;
-    flex-direction: column; /* Stack publication titles vertically */
-    gap: 10px; /* Space between publication boxes */
+  flex-direction: column;
+  gap: 10px;
 }
 
 .publication-box {
-    display: flex; /* Flex display for alignment */
-    background-color: #ffffff; /* White background for publication boxes */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    text-decoration: none; /* Remove underline from links */
-    color: #333; /* Text color */
-    padding: 16px; /* Inner padding */
-    transition: transform 0.3s; /* Smooth scale effect on hover */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  padding: 16px;
+  transition: transform 0.3s;
 }
 
 .publication-box:hover {
-    transform: scale(1.02); /* Slightly enlarge the box on hover */
+  transform: scale(1.02);
 }
 
 .publication_title {
-    font-size: 0.9rem; /* Font size for the publication title */
-    line-height: 1.4; /* Line height for better readability */
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
+
+/* Contact Section */
 .contact {
-    display: flex; /* Flex display for layout */
-    margin: 20px 0; /* Space above and below the contact section */
-    background: var(--gradient); /* Gradient background */
-    padding: 16px; /* Inner padding */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  display: flex;
+  margin: 20px 0;
+  background: var(--gradient);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact .heading {
-    flex: 0 0 30%; /* Fixed 30% width for the heading */
+  flex: 0 0 30%;
+  padding-right: 10px;
     font-weight: bold;
-    color: #333; /* Dark color for readability */
-    padding-right: 10px; /* Space between heading and content */
+  color: #333;
 }
 
 .contact .content {
-    flex: 1; /* Take remaining space for icons */
+  flex: 1;
 }
 
-
 .contact h1 {
-    font-size: 2rem; /* Size of the heading */
-    margin-bottom: 20px; /* Space below the heading */
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .contact-icons {
-    display: flex; /* Flex display for icons */
-    justify-content: flex-start; /* Align icons to the left */
-    gap: 20px; /* Space between icons */
+  display: flex;
+  gap: 20px;
 }
 
 .contact-icon {
-    display: inline-block; /* Keep icons inline */
-    transition: transform 0.3s; /* Smooth scale effect on hover */
+  transition: transform 0.3s;
 }
 
 .contact-icon img {
-    width: 40px; /* Icon size */
-    height: 40px; /* Icon size */
+  width: 40px;
+  height: 40px;
 }
 
 .contact-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  transform: scale(1.1);
 }
 
 /* Copyright Section */
 .copyright {
     text-align: center;
-    margin: 10px 0; /* Space between blocks */
-    background: var(--gradient); /* Gradient background */
+  margin: 10px 0;
+  background: var(--gradient);
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

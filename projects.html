@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="graduate student, purdue university, computational biology" name="keywords">
+  <meta content="Samrat Paudel" name="author">
+
+  <title>Samrat Paudel</title>
+
+  <!-- Favicon -->
+  <link href="/icons/icon.png" rel="icon" type="image/x-icon">
+
+  <!-- CSS Stylesheet -->
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="/js/script.js"></script>
+
+  <!-- Font and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="container">
+<header>
+  <div class="name">
+    <h1>Samrat Paudel</h1>
+    Graduate Student, Purdue University
+  </div>
+
+  <div class="button">
+    <!-- Buttons with href linked to specific sections by id -->
+    <button onclick="location.href='index.html#timeline'">Timeline</button>
+    <button onclick="scrollToSection('projects')">Projects</button>
+    <button onclick="location.href='index.html#publications'">Publications</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
+  </div>
+</header>
+
+
+<div class="projects" id="projects">
+  <h2 class="projects-heading">Projects</h2>
+  <div class="project-container">
+
+    <!-- RNA-seq project -->
+    <div class="project-box">
+      <a href="project-url-1">
+        <img alt="rnaseq" class="project-image" src="img/rnaseq.png">
+      </a>
+      <p class="project-description">
+        This RNA-seq project focuses on identifying differentially expressed mRNAs in diffuse large B-cell lymphoma
+        (DLBCL)
+        using sequencing data from healthy and diseased dog models. The analysis aims to correlate miRNA expression with
+        mRNA levels,
+        validating findings through RT-qPCR, with the goal of advancing diagnostics and personalized treatments for
+        DLBCL.
+      </p>
+      <div class="project-buttons">
+        <!--        <a href="publication-url-1" class="btn">Publication</a>-->
+        <a class="btn" href="https://github.com/your-github-repo-1">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Academic Mathch Maker -->
+    <div class="project-box">
+      <a href="project-url-1">
+        <img alt="Academic Match Maker" class="project-image" src="img/match_maker.png">
+      </a>
+      <p class="project-description">
+        This Flask web application allows users to enter their name and research statement, which is then compared to a
+        database of faculty biographies from Purdue University's Biological Sciences Department. The app uses a TF-IDF
+        algorithm to assign weights to words in the research statements and faculty bios, ignoring a custom list of stop
+        words. After submission, the user is shown a results page that lists faculty members in order of relevance,
+        based on a customizable scoring threshold. The results include the number of matching faculty members and their
+        biographies, providing an efficient way to find relevant faculty for collaboration.
+      </p>
+      <div class="project-buttons">
+        <a class="btn" href="https://github.com/psam96/biocomputing_final_project">GitHub</a>
+      </div>
+    </div>
+
+    <!-- SARS-CoV-2 study project -->
+    <div class="project-box">
+      <a href="https://doi.org/10.3390/covid1020036">
+        <img alt="covid-nepal" class="project-image" src="img/covid.png">
+      </a>
+      <p class="project-description">
+        This study analyzes SARS-CoV-2 variants in Nepal during the 2020-2021 pandemic waves. Using 127 sequences from
+        the GISAID database,
+        it identifies the alpha, delta, and kappa variants, with the delta variant emerging as dominant by July 2021.
+        The findings emphasize the need for enhanced genomic surveillance and targeted public health policies.
+      </p>
+      <div class="project-buttons">
+        <a class="btn" href="https://doi.org/10.3390/covid1020036">Publication</a>
+        <a class="btn" href="https://github.com/psam96/sars_cov2_mdpi">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Guava leaf study project -->
+    <div class="project-box">
+      <a href="https://doi.org/10.3390/antiox11112204">
+        <img alt="guava-leaf" class="project-image" src="img/guava.jpg">
+      </a>
+      <p class="project-description">
+        This study investigates the antioxidant and anticancer properties of Psidium guajava L. essential oil.
+        Through GC-MS analysis, 17 bioactive compounds were identified. In vitro tests revealed significant efficacy
+        against breast cancer cells, while in silico studies suggest these compounds may act as selective estrogen
+        receptor modulators, highlighting their therapeutic potential.
+      </p>
+      <div class="project-buttons">
+        <a class="btn" href="https://doi.org/10.3390/antiox11112204">Publication</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="contact" id="contact">
+  <div class="heading">
+    <h1>Contact Me</h1>
+  </div>
+  <div class="content">
+    <div class="contact-icons">
+      <a aria-label="GitHub" class="contact-icon" href="https://github.com/paudelsam">
+        <img alt="Github Icon" src="icons/github.png">
+      </a>
+      <a aria-label="Email" class="contact-icon" href="mailto:paudel3@purdue.edu">
+        <img alt="Email Icon" src="icons/email.png">
+      </a>
+      <a aria-label="LinkedIn" class="contact-icon" href="https://www.linkedin.com/in/samraaaaaat/">
+        <img alt="LinkedIn Icon" src="icons/linkedin.png">
+      </a>
+      <a aria-label="Google Scholar" class="contact-icon"
+         href="https://scholar.google.com/citations?user=O36WstsAAAAJ&hl=en">
+        <img alt="Google Scholar Icon" src="icons/google-scholar.png">
+      </a>
+      <a aria-label="Instagram" class="contact-icon" href="https://www.instagram.com/translating__life/">
+        <img alt="Instagram Icon" src="icons/insta.png">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="copyright">
+  Copyright: Samrat Paudel
+  <br>
+  Website Last Updated: September 29, 2024
+</div>
+
+
+</body>
+</html>

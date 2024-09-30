@@ -47,7 +47,7 @@
   </div>
   <div class = "timeline">
     <h1>Timeline of my Life</h1>
-    <img src="/img/timeline.png" alt="Timeline of my life", height="500", width = 100%>
+    <img , alt="Timeline of my life" src="/img/timeline.png" width=100%>
   </div>
 </div>
 
@@ -66,34 +66,72 @@
 <div id="projects" class="projects">
   <h2 class="projects-heading">Projects</h2>
   <div class="project-container">
-    <a href="project-url-1" class="project-box">
-      <img src="img/rnaseq.png" alt="rnaseq" class="project-image">
-      <p class="project-description">This RNA-seq project focuses on identifying differentially expressed mRNAs in diffuse
-        large B-cell lymphoma (DLBCL) using sequencing data from healthy and diseased dog models. The analysis aims to
-        correlate miRNA expression with mRNA levels, validating findings through RT-qPCR, with the goal of advancing
-        diagnostics and personalized treatments for DLBCL.</p>
-    </a>
-    <a href="https://doi.org/10.3390/covid1020036" class="project-box">
-      <img src="img/covid.png" alt="covid-nepal" class="project-image">
-      <p class="project-description">This study analyzes SARS-CoV-2 variants in Nepal during the 2020-2021 pandemic waves.
-        Using 127 sequences from the GISAID database, it identifies the alpha, delta, and kappa variants, with the delta
-        variant emerging as dominant by July 2021. The findings emphasize the need for enhanced genomic surveillance and
-        targeted public health policies.</p>
-    </a>
-    <a href="https://doi.org/10.3390/antiox11112204" class="project-box">
-      <img src="img/guava.jpg" alt="guava-leaf" class="project-image">
-      <p class="project-description">This study investigates the antioxidant and anticancer properties of
-        Psidium guajava L. essential oil. Through GC-MS analysis, 17 bioactive compounds were identified. In vitro tests
-        revealed significant efficacy against breast cancer cells, while in silico studies suggest these compounds may
-        act as selective estrogen receptor modulators, highlighting their therapeutic potential.</p>
-    </a>
+
+    <!-- RNA-seq project -->
+    <div class="project-box">
+      <a href="project-url-1">
+        <img alt="rnaseq" class="project-image" src="img/rnaseq.png">
+      </a>
+      <p class="project-description">
+        This RNA-seq project focuses on identifying differentially expressed mRNAs in diffuse large B-cell lymphoma
+        (DLBCL)
+        using sequencing data from healthy and diseased dog models. The analysis aims to correlate miRNA expression with
+        mRNA levels,
+        validating findings through RT-qPCR, with the goal of advancing diagnostics and personalized treatments for
+        DLBCL.
+      </p>
+      <div class="project-buttons">
+        <!--        <a href="publication-url-1" class="btn">Publication</a>-->
+        <a class="btn" href="https://github.com/your-github-repo-1">GitHub</a>
+      </div>
+    </div>
+
+
+    <!-- SARS-CoV-2 study project -->
+    <div class="project-box">
+      <a href="https://doi.org/10.3390/covid1020036">
+        <img alt="covid-nepal" class="project-image" src="img/covid.png">
+      </a>
+      <p class="project-description">
+        This study analyzes SARS-CoV-2 variants in Nepal during the 2020-2021 pandemic waves. Using 127 sequences from
+        the GISAID database,
+        it identifies the alpha, delta, and kappa variants, with the delta variant emerging as dominant by July 2021.
+        The findings emphasize the need for enhanced genomic surveillance and targeted public health policies.
+      </p>
+      <div class="project-buttons">
+        <a class="btn" href="https://doi.org/10.3390/covid1020036">Publication</a>
+        <a class="btn" href="https://github.com/psam96/sars_cov2_mdpi">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Guava leaf study project -->
+    <div class="project-box">
+      <a href="https://doi.org/10.3390/antiox11112204">
+        <img alt="guava-leaf" class="project-image" src="img/guava.jpg">
+      </a>
+      <p class="project-description">
+        This study investigates the antioxidant and anticancer properties of Psidium guajava L. essential oil.
+        Through GC-MS analysis, 17 bioactive compounds were identified. In vitro tests revealed significant efficacy
+        against breast cancer cells, while in silico studies suggest these compounds may act as selective estrogen
+        receptor modulators, highlighting their therapeutic potential.
+      </p>
+      <div class="project-buttons">
+        <a class="btn" href="https://doi.org/10.3390/antiox11112204">Publication</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="project-buttons">
+    <a class="btn" href="projects.html" target="_blank">Complete Project List</a>
   </div>
 </div>
+
 
 <div id="publications" class="publications">
     <div class="heading">
         <h1>Publications</h1>
-        <a href="https://scholar.google.com/citations?user=O36WstsAAAAJ&hl=en" class="complete-link">Complete Publication</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=O36WstsAAAAJ&hl=en" target="_blank">Complete
+        Publication</a>
     </div>
     <div class="content">
         <a href="https://doi.org/10.3390/covid1020036" class="publication-box">
