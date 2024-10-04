@@ -2,7 +2,7 @@
 Welcome to my personal website! This site showcases my research, projects, and professional background.
 
 ## Website URL
-[paudelsam.github.io](paudelsam.github.io)
+[paudelsam.github.io](https://paudelsam.github.io)
 
 ## About
 This website highlights my journey as a PhD student in Computational Biology, focusing on RNA-seq analysis, differential gene expression, and related computational techniques. You'll find information about my research interests, projects, and other academic activities.
