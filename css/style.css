@@ -258,6 +258,9 @@ header .button button:hover, .button button:hover {
   color: #333;
   text-align: left;
 }
+.publications .heading .btn {
+  font-weight: normal;
+}
 
 .publications .content {
   flex: 1;
