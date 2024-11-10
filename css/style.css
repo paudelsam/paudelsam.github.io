@@ -211,11 +211,18 @@ header .button button:hover, .button button:hover {
   font-size: 1rem;
 }
 
-.project-buttons, .publication-box {
+.project-buttons {
   display: flex;
   justify-content: center;
   gap: 0.625rem;
   margin: 0.625rem;
+}
+
+.publication-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: 0.3125rem, 0.625rem;
 }
 
 .btn {
@@ -301,16 +308,18 @@ header .button button:hover, .button button:hover {
 
 .contact h1 {
   font-size: 2rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
 .contact-icons {
   display: flex;
   gap: 1.25rem;
+  vertical-align: middle;
 }
 
 .contact-icon {
   transition: transform 0.3s;
+  margin-bottom: 0.625rem;
 }
 
 .contact-icon img {
@@ -325,6 +334,8 @@ header .button button:hover, .button button:hover {
 /* Copyright Section */
 .copyright {
   text-align: center;
+  font-weight: bold;
+  
   margin: 0.625rem 0;
   background: var(--gradient);
   padding: 1rem;
@@ -357,5 +368,3 @@ header .button button:hover, .button button:hover {
     height: 2rem;
   }
 }
-
-
