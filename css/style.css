@@ -15,6 +15,45 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .about_me, .education {
+    flex-direction: column;
+  }
+
+  .about_me .heading,
+  .about_me .timeline,
+  .education .heading,
+  .education .content {
+    flex: 1 1 100%;
+  }
+
+  .project-box {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .contact h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.875rem;
+  }
+}
+
 /* General styles */
 body {
   font-family: 'Helvetica', sans-serif;
@@ -78,6 +117,21 @@ header .button button:hover, .button button:hover {
   transform: scale(1.05);
 }
 
+/* Responsive adjustments for header buttons */
+@media (max-width: 768px) {
+  header .button, .button {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Reduce gap for smaller screens */
+  }
+
+  header .button button, .button button {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.875rem;
+  }
+}
+
+
 /* Name section styles */
 .name h1 {
   font-size: 2rem;
@@ -120,7 +174,7 @@ header .button button:hover, .button button:hover {
 }
 
 /* Projects Section */
-.projects, .blog {
+.projects {
   text-align: center;
   margin: 0.625rem 0;
   background: var(--gradient);
@@ -134,13 +188,13 @@ header .button button:hover, .button button:hover {
   margin-bottom: 1.25rem;
 }
 
-.project-container, .blog-container {
+.project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 1.25rem;
 }
 
-.project-box, .blog-box {
+.project-box {
   border: 0.0625rem solid #ccc;
   padding: 0.9375rem;
   border-radius: 0.625rem;
@@ -148,11 +202,11 @@ header .button button:hover, .button button:hover {
   transition: transform 0.3s ease;
 }
 
-.project-box:hover, .blog-box:hover {
+.project-box:hover {
   transform: translateY(-0.3125rem);
 }
 
-.project-description, .blog-description {
+.project-description {
   margin-top: 0.625rem;
   font-size: 1rem;
 }
@@ -168,7 +222,7 @@ header .button button:hover, .button button:hover {
   display: flex;
   justify-content: center;
   gap: 0.625rem;
-  margin: 0.3125rem 0.625rem;
+  margin: 0.3125rem, 0.625rem;
 }
 
 .btn {
@@ -186,55 +240,114 @@ header .button button:hover, .button button:hover {
   background-color: #0056b3;
 }
 
+/* Publications Section */
+.publications {
+  text-align: left;
+  display: flex;
+  margin: 0.625rem 0;
+  background: var(--gradient);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.publications .heading {
+  flex: 0 0 30%;
+  padding-right: 0.625rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+.publications .heading .btn {
+  font-weight: normal;
+}
+
+.publications .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.publication-box {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.publication-box:hover {
+  transform: scale(1.02);
+}
+
+.publication_title {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  margin: 1.25rem 0;
+  background: var(--gradient);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.contact .heading {
+  flex: 0 0 30%;
+  padding-right: 0.625rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact .content {
+  flex: 1;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  margin-bottom: 0.625rem;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1.25rem;
+  vertical-align: middle;
+}
+
+.contact-icon {
+  transition: transform 0.3s;
+  margin-bottom: 0.625rem;
+}
+
+.contact-icon img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  font-weight: bold;
+  
+  margin: 0.625rem 0;
+  background: var(--gradient);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-
-  .about_me, .education {
-    flex-direction: column;
-  }
-
-  .about_me .heading,
-  .about_me .timeline,
-  .education .heading,
-  .education .content {
-    flex: 1 1 100%;
-  }
-
-  .project-box {
-    width: 90%;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .contact h1 {
-    font-size: 1.5rem;
-  }
-
-  .project-description {
-    font-size: 0.875rem;
-  }
-
-  header .button, .button {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem; /* Reduce gap for smaller screens */
-  }
-
-  header .button button, .button button {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.875rem;
-  }
-
   .contact {
     flex-direction: column;
     align-items: center;
