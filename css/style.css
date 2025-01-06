@@ -174,7 +174,7 @@ header .button button:hover, .button button:hover {
 }
 
 /* Projects Section */
-.projects .blog {
+.projects, .blog {
   text-align: center;
   margin: 0.625rem 0;
   background: var(--gradient);
@@ -188,13 +188,13 @@ header .button button:hover, .button button:hover {
   margin-bottom: 1.25rem;
 }
 
-.project-container .blog-container {
+.project-container, .blog-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 1.25rem;
 }
 
-.project-box .blog-box {
+.project-box, .blog-box {
   border: 0.0625rem solid #ccc;
   padding: 0.9375rem;
   border-radius: 0.625rem;
