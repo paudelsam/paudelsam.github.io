@@ -1,23 +1,23 @@
 ---
 layout: default
-title: "Types of Graphs in Machine Learning"
+title: "Map of visited states in Python"
 date: 2025-02-28
 categories: general
 ---
 
 # US States Visited Map
-Last year, I have this idea of making a state map of USA so that I can shade the states I have visited. Let me show you how I did it using Python.
+Last year, I had the idea of making a state map of the USA to shade the states I have visited. I'll be sure to show you how I did it using Python.
 
 ## Prerequisites
 ### Dependencies
-We will need following Python packages installed. I am using `pip` to install the packages. Run this only once.
+We will need the following Python packages installed. I am using `pip` to install the packages. Run this only once.
 
 ```python
 !pip install geopandas
 !pip install geodatasets
 ```
-### Shape files
-Download shape files from [this folder](https://github.com/paudelsam/paudelsam.github.io/tree/main/data/shape_files). Alternatively, you can find updated shape files from internet as well.
+### Shapefiles
+Download shape files from <a href="https://github.com/paudelsam/paudelsam.github.io/tree/main/data/shape_files" target="_blank">this folder</a>. Alternatively, you can find updated shape files on the internet as well.
 
 ## Create the map
 Now that we have everything we need, let's start creating the map. Import required packages
@@ -39,7 +39,7 @@ Load the shape file. Ensure you are pointing to the correct directory
 states = geopandas.read_file("/shape_files/States_shapefile.shp")
 ```
 
-To make the map look beautiful I am removign Alaska and Hawaii for now. View the edited map and confirm everything is fine. Also, note the format of state names and their symbol.
+To make the map look beautiful I am removing Alaska and Hawaii for now. View the edited map and confirm everything is fine. Also, note the format of state names and their symbol.
 ```python
 states_small = states[(states.State_Name != "ALASKA") & (states.State_Name != "HAWAII")]
 states_small
@@ -57,7 +57,7 @@ fig, ax = plt.subplots(1, 1, figsize=(16, 9))
 states_small.plot(ax=ax, edgecolor="Black", linewidth=0.5, facecolor="lightgray")
 ```
 
-Now, plot visited states for 2023 and 2024. If you use state abbreviation, use the appropriate header in the shape file for state abbreviation.
+Now, plot the visited states for 2023 and 2024. If you use state abbreviation, use the appropriate header in the shape file for state abbreviation.
 ```python
 visited_2023 = states[states.State_Name.isin(visited_states_2023)]
 visited_2024 = states[states.State_Name.isin(visited_states_2024)]
@@ -88,10 +88,10 @@ ax.set_title("States Visited")
 ax.set_axis_off()
 ```
 
-Finally save and show the map
+Finally, save and show the map
 ```python
 plt.savefig("visited_states.png", dpi=300, bbox_inches=None)
 plt.show()
 ```
 A sample map produced by the script is shown below.
-![state_visited]([https://github.com/user-attachments/assets/535a80a3-afd5-4d80-99ca-6facc3fc2b9b](https://github.com/paudelsam/paudelsam.github.io/blob/main/data/image_blog/state_visited.png))
+![state_visited](https://raw.githubusercontent.com/paudelsam/paudelsam.github.io/main/data/image_blog/state_visited.png)
