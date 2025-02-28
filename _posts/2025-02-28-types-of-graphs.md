@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "My First Blog Post"
+title: "Types of Graphs in Machine learning"
 date: 2025-02-28
 categories: general
 ---
