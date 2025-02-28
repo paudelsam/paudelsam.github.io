@@ -3,4 +3,5 @@ theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-paginate
+  - jekyll-ipynb
 paginate: 5
