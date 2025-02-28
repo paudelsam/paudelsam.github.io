@@ -1,6 +1,6 @@
 title: "My Blog"
 description: " A blog section for my website"
-theme: minima 
+theme: jekyll-theme-cayman 
 
 plugins:
   - jekyll-paginate
