@@ -1,3 +1,7 @@
 title: "My Blog"
 description: " A blog section for my website"
 theme: minima 
+
+plugins:
+  - jekyll-paginate
+paginate: 5
