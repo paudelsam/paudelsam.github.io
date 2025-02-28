@@ -1,0 +1,18 @@
+@import url("https://cdn.jsdelivr.net/npm/jekyll-theme-cayman@latest/cayman.min.css");
+
+.blog-container {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+}
+
+.sidebar {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.blog-content {
+    flex-grow: 1;
+}
