@@ -8,7 +8,4 @@
       {% endfor %}
     </ul>
   </aside>
-  <main class="blog-content">
-    <p>Welcome to my blog! Click on a post from the sidebar to read.</p>
-  </main>
 </div>
