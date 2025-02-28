@@ -94,4 +94,4 @@ plt.savefig("visited_states.png", dpi=300, bbox_inches=None)
 plt.show()
 ```
 A sample map produced by the script is shown below.
-![state_visited](https://github.com/user-attachments/assets/535a80a3-afd5-4d80-99ca-6facc3fc2b9b)
+![state_visited]([https://github.com/user-attachments/assets/535a80a3-afd5-4d80-99ca-6facc3fc2b9b](https://github.com/paudelsam/paudelsam.github.io/blob/main/data/image_blog/state_visited.png))
