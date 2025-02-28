@@ -17,7 +17,7 @@ We will need following Python packages installed. I am using `pip` to install th
 !pip install geodatasets
 ```
 ### Shape files
-Download shape files from [fs](fd). Alternatively, you can find updated shape files from internet as well.
+Download shape files from [this folder](https://github.com/paudelsam/paudelsam.github.io/tree/main/data/shape_files). Alternatively, you can find updated shape files from internet as well.
 
 ## Create the map
 Now that we have everything we need, let's start creating the map. Import required packages
