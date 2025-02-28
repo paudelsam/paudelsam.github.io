@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Blog"
+title: "My Blog"
+author: "Samrat Paudel"
 ---
 
 <h1>Recent Posts</h1>
