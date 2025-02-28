@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "My First Blog Post"
 date: 2025-02-28
 categories: general
