@@ -6,9 +6,13 @@ categories: general
 ---
 
 # US States Visited Map
-Last year, I had the idea of making a state map of the USA to shade the states I have visited. I'll be sure to show you how I did it using Python.
+Last year, I had the idea of making a state map of the USA to shade the states I have visited. The map generated using Python looked something like this:
+![state_visited](https://raw.githubusercontent.com/paudelsam/paudelsam.github.io/main/data/image_blog/state_visited.png)
+Looks interesting? If yes, let's dive into how I made it.
 
 ## Prerequisites
+For this task, we need some dedicated Python packages and shape files. Assuming you already have Python installed, we can start with package installation.
+
 ### Dependencies
 We will need the following Python packages installed. I am using `pip` to install the packages. Run this only once.
 
@@ -17,7 +21,7 @@ We will need the following Python packages installed. I am using `pip` to instal
 !pip install geodatasets
 ```
 ### Shapefiles
-Download shape files from <a href="https://github.com/paudelsam/paudelsam.github.io/tree/main/data/shape_files" target="_blank">this folder</a>. Alternatively, you can find updated shape files on the internet as well.
+Download shape files from <a href="https://github.com/paudelsam/paudelsam.github.io/tree/main/data/shape_files" target="_blank">this folder</a>. Alternatively, you can find updated shape files on the internet as well. *Note: Even though it looks like we are using only `.shp` file, please download `.shx` file too as both files are required to generate graph*
 
 ## Create the map
 Now that we have everything we need, let's start creating the map. Import required packages
